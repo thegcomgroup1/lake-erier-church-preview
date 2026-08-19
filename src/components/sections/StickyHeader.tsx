@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 const nav = [
   { label: "New Here", hash: "new-here" },
-  { label: "About", hash: "about" },
+  { label: "Who We Are", hash: "about" },
   { label: "Times & Location", hash: "times" },
   { label: "Give", hash: "give" },
 ];
@@ -18,9 +18,14 @@ export function StickyHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" hash="top" className="flex items-center gap-2">
-          <span className="font-display text-xl font-semibold text-secondary">
-            {siteConfig.brand.logoText}
-          </span>
+          <img
+            src={siteConfig.brand.logoImageSrc}
+            alt={`${siteConfig.church.name} logo`}
+            width={220}
+            height={56}
+            className="h-9 w-auto md:h-10"
+          />
+          <span className="sr-only">{siteConfig.brand.logoText}</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

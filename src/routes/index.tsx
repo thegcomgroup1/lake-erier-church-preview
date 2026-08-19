@@ -16,19 +16,20 @@ import { Footer } from "@/components/sections/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "[Church Name] — A welcoming home in [City]" },
+      { title: "Lake Erie Church | Madison, Ohio — Believe and Belong" },
       {
         name: "description",
         content:
-          "Visiting for the first time? Here's everything you need — service times, what to expect, and how to plan your visit.",
+          "Lake Erie Church in Madison, Ohio. Sundays at 10 AM, 2300 Hubbard Rd. Loving God, loving people since 1966 — plan your first visit today.",
       },
-      { property: "og:title", content: "[Church Name] — A welcoming home in [City]" },
+      { property: "og:title", content: "Lake Erie Church | Madison, Ohio — Believe and Belong" },
       {
         property: "og:description",
         content:
-          "Visiting for the first time? Here's everything you need — service times, what to expect, and how to plan your visit.",
+          "Sundays at 10 AM in Madison, Ohio. A multi-generational, multi-cultural church loving God and loving people since 1966.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
