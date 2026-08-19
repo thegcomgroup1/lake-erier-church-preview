@@ -14,7 +14,9 @@
  * unrelated church, different pastors.
  *
  * TODO_FROM_CALL: public email, kids/youth ministry names + times,
- * midweek schedule, giving platform URL, missions country specifics,
+ * midweek schedule, giving platform URL — currently routed through the old
+ * site; get the direct Tithely/Givelify/PushPay URL so giving doesn't depend
+ * on lakeeriechurch.com staying up, missions country specifics,
  * photos (building, congregation, missions, outreach), whether the
  * "Between Sundays" podcast is still recording.
  */
@@ -59,11 +61,12 @@ export const siteConfig = {
     timesLong: [{ day: "Sunday Worship", time: "10:00 AM – 12:00 PM" }],
     address: "2300 Hubbard Rd, Madison, OH 44057",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=-81.0700%2C41.7900%2C-80.9900%2C41.8300&layer=mapnik",
+      "https://www.google.com/maps?q=2300+Hubbard+Rd,+Madison,+OH+44057&output=embed",
     mapLinkUrl: "https://www.google.com/maps/search/?api=1&query=2300+Hubbard+Rd%2C+Madison%2C+OH+44057",
     practical: [
       { label: "Parking", value: "Free, on campus" },
       { label: "Service length", value: "About two hours" },
+      { label: "Kids & youth", value: "Ministry for every age, every Sunday" },
       { label: "What to wear", value: "Come exactly as you are" },
     ],
   },
@@ -140,7 +143,7 @@ export const siteConfig = {
 
   give: {
     line: "We make a living by what we get, but a life by what we give. Your giving supports this church, our neighbors in Lake County, and mission work on five continents.",
-    onlineUrl: "https://lakeeriechurch.com/give/",
+    onlineUrl: "#contact",
   },
 
   welcomeVideo: {
@@ -159,7 +162,6 @@ export const siteConfig = {
     socials: [
       { label: "Facebook", url: "https://www.facebook.com/lechurch/" },
       { label: "YouTube", url: "https://www.youtube.com/channel/UCO2LSyS1WFmZvwEnaeYufFw" },
-      { label: "Current site", url: "https://lakeeriechurch.com" },
     ],
   },
 } as const;
