@@ -1,8 +1,8 @@
-import { Heart, Clock, Shirt, Baby, type LucideIcon } from "lucide-react";
+import { Heart, Clock, Shirt, Baby, Users, Flame, type LucideIcon } from "lucide-react";
 import { PlanYourVisitButton } from "@/components/PlanYourVisitButton";
 import { siteConfig } from "@/config/site";
 
-const icons: Record<string, LucideIcon> = { Heart, Clock, Shirt, Baby };
+const icons: Record<string, LucideIcon> = { Heart, Clock, Shirt, Baby, Users, Flame };
 
 export function WhatToExpect() {
   return (
