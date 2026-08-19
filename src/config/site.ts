@@ -22,11 +22,11 @@
 import logoHorizontal from "@/assets/lakeerie/logo-horizontal.png.asset.json";
 import heroImage from "@/assets/lakeerie/hero.jpg.asset.json";
 import waves from "@/assets/lakeerie/waves.jpg.asset.json";
-import storyImage from "@/assets/placeholders/story.jpg";
-import life1 from "@/assets/placeholders/life-1.jpg";
-import life2 from "@/assets/placeholders/life-2.jpg";
-import life4 from "@/assets/placeholders/life-4.jpg";
-import life5 from "@/assets/placeholders/life-5.jpg";
+import groupOuting from "@/assets/lakeerie/group-outing.jpg.asset.json";
+import kidsTwoBoys from "@/assets/lakeerie/kids-two-boys.jpg.asset.json";
+import kidsPlay from "@/assets/lakeerie/kids-play.jpg.asset.json";
+import youthThirst from "@/assets/lakeerie/youth-thirst.jpg.asset.json";
+import welcomeDesk from "@/assets/lakeerie/welcome-desk.jpg.asset.json";
 
 export const siteConfig = {
   church: {
@@ -51,7 +51,7 @@ export const siteConfig = {
       imageSrc: heroImage.url,
       videoSrc: "",
     },
-    storyImageSrc: storyImage,
+    storyImageSrc: groupOuting.url,
   },
 
   service: {
@@ -93,11 +93,11 @@ export const siteConfig = {
 
   life: [
     { src: heroImage.url, alt: "Sunday morning worship at Lake Erie Church" },
-    { src: life1, alt: "Volunteers welcoming guests before service" },
-    { src: life2, alt: "Kids ministry at Lake Erie Church" },
+    { src: welcomeDesk.url, alt: "Welcome desk greeting guests at Lake Erie Church" },
+    { src: kidsTwoBoys.url, alt: "Kids having fun in LEC Kids ministry" },
     { src: waves.url, alt: "Lake Erie shoreline near Madison, Ohio" },
-    { src: life4, alt: "Members greeting one another after service" },
-    { src: life5, alt: "A small group gathered together" },
+    { src: kidsPlay.url, alt: "Children playing together during kids ministry" },
+    { src: youthThirst.url, alt: "Thirst youth ministry room at Lake Erie Church" },
   ],
 
   ministries: [
@@ -149,7 +149,7 @@ export const siteConfig = {
     heading: "A quick hello before you visit.",
     body:
       "Visiting a new church can feel like a big step. Here's a short hello from Pastors Bill and Shelley so you know exactly who you'll be meeting on Sunday.",
-    posterSrc: storyImage,
+    posterSrc: groupOuting.url,
     embedUrl: "",
   },
 
