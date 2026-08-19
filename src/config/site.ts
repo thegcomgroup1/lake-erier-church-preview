@@ -1,161 +1,166 @@
 /**
- * HLPR Master Ministry Base — site configuration (the swap layer).
+ * Lake Erie Church (LEC) — Madison, Ohio
+ * Lead Pastors: Bill and Shelley Isaacs (since 2019), the 13th pastors.
+ * Founded 1966 in Lake County by Pastors Lloyd and Virginia Scott.
  *
- * To re-skin for a new church, change values in this file plus the brand
- * tokens in src/styles.css. The structure of the page never changes.
+ * Verified from lakeeriechurch.com (Dec 2025 / Apr 2026 site):
+ *   - Services: Sundays 10:00am – 12:00pm
+ *   - 2300 Hubbard Rd, Madison, OH 44057
+ *   - (440) 983-4140
+ *   - YouTube: /channel/UCO2LSyS1WFmZvwEnaeYufFw
+ *   - Brand: dark teal + navy, "Loving God, Loving People"
  *
- * All copy below is written warm/plain/human, addressed to a nervous
- * first-time visitor. Square-bracket tokens are obvious swap targets.
+ * NOTE: Do NOT confuse with Lake Erie Church in Erie, PA (lakeerienow.com) —
+ * unrelated church, different pastors.
+ *
+ * TODO_FROM_CALL: public email, kids/youth ministry names + times,
+ * midweek schedule, giving platform URL, missions country specifics,
+ * photos (building, congregation, missions, outreach), whether the
+ * "Between Sundays" podcast is still recording.
  */
 
-import heroImage from "@/assets/placeholders/hero.jpg";
+import logoHorizontal from "@/assets/lakeerie/logo-horizontal.png.asset.json";
+import heroImage from "@/assets/lakeerie/hero.jpg.asset.json";
+import waves from "@/assets/lakeerie/waves.jpg.asset.json";
 import storyImage from "@/assets/placeholders/story.jpg";
 import life1 from "@/assets/placeholders/life-1.jpg";
 import life2 from "@/assets/placeholders/life-2.jpg";
 import life3 from "@/assets/placeholders/life-3.jpg";
 import life4 from "@/assets/placeholders/life-4.jpg";
 import life5 from "@/assets/placeholders/life-5.jpg";
-import life6 from "@/assets/placeholders/life-6.jpg";
 
 export const siteConfig = {
   church: {
-    name: "[CHURCH NAME]",
-    shortName: "[CHURCH]",
-    city: "[CITY, ST]",
-    tagline: "A welcoming home for people just like you.",
+    name: "Lake Erie Church",
+    shortName: "Lake Erie Church",
+    city: "Madison, OH",
+    tagline: "Where you can believe and belong.",
     mission:
-      "We're a church for anyone who's ever wondered if there's a place for them. There is — and it's right here.",
+      "Loving God, Loving People — a multi-generational, multi-cultural Pentecostal church in Lake County with a heart for our community and a bold vision for the world.",
     story: [
-      "[CHURCH NAME] started in [YEAR] with a handful of families and one quiet conviction: that anyone who walked through the doors should feel like they already belonged.",
-      "All these years later, that's still the heart of who we are. We're ordinary people — parents, grandparents, kids, college students, retirees — learning what it looks like to follow Jesus together in [CITY].",
+      "Lake Erie Church began in 1966 in Lake County, Ohio — the vision and dreams of Pastors Lloyd and Virginia Scott. Sixty years and thirteen pastors later, that vision is still going. Bill and Shelley Isaacs have led the church since 2019, and since 2022 we've called Madison home.",
+      "Years ago a prophecy was spoken over this church: that it would be a light to the nations of the world. Today we are engaged in missions on five continents — evangelism, church planting, children's ministry, and benevolence work in some of the poorest places on earth. And right here in Lake County we serve the homeless, widows, and young mothers. Six generations now worship together on our campus.",
     ],
-    foundedLine: "Serving [CITY] since [YEAR]",
+    foundedLine: "Serving Lake County since 1966",
   },
 
   brand: {
-    logoText: "[CHURCH]",
-    /**
-     * Hero media. Free mockups: leave type as "image" (videoSrc ignored).
-     * Live sites / paid builds: set type to "video" and point videoSrc at a
-     * compressed, muted, loopable .mp4/.webm. imageSrc is ALWAYS used as the
-     * poster, the mobile fallback, and the reduced-motion fallback.
-     */
+    logoText: "Lake Erie Church",
+    logoImageSrc: logoHorizontal.url,
     heroMedia: {
       type: "image" as "image" | "video",
-      imageSrc: heroImage,
+      imageSrc: heroImage.url,
       videoSrc: "",
     },
     storyImageSrc: storyImage,
   },
 
   service: {
-    timesShort: "Sundays · 9:00 & 10:45 AM",
-    timesLong: [
-      { day: "Sunday", time: "9:00 AM" },
-      { day: "Sunday", time: "10:45 AM" },
-    ],
-    address: "[123 Street Name, City, ST 00000]",
+    timesShort: "Sundays · 10:00 AM",
+    timesLong: [{ day: "Sunday Worship", time: "10:00 AM – 12:00 PM" }],
+    address: "2300 Hubbard Rd, Madison, OH 44057",
     mapEmbedUrl:
-      "https://www.openstreetmap.org/export/embed.html?bbox=-97.7437%2C30.2660%2C-97.7372%2C30.2706&layer=mapnik",
-    mapLinkUrl: "https://www.google.com/maps",
+      "https://www.openstreetmap.org/export/embed.html?bbox=-81.0700%2C41.7900%2C-80.9900%2C41.8300&layer=mapnik",
+    mapLinkUrl: "https://www.google.com/maps/search/?api=1&query=2300+Hubbard+Rd%2C+Madison%2C+OH+44057",
     practical: [
-      { label: "Parking", value: "Free, right out front" },
-      { label: "Service length", value: "Around 70 minutes" },
-      { label: "What to wear", value: "Whatever you're comfortable in" },
+      { label: "Parking", value: "Free, on campus" },
+      { label: "Service length", value: "About two hours" },
+      { label: "What to wear", value: "Come exactly as you are" },
     ],
   },
 
   expect: [
     {
-      icon: "Heart" as const,
-      title: "You'll be welcomed, not cornered",
-      body: "A friendly hello at the door — and that's it. Nobody will single you out, ask you to stand, or put you on the spot.",
+      icon: "Users" as const,
+      title: "Believe and belong",
+      body: "Multi-generational and multi-cultural by conviction, not by accident. Six generations worship together here — there is a place for you in this house.",
     },
     {
-      icon: "Clock" as const,
-      title: "About 70 minutes, start to finish",
-      body: "Music, a practical message from the Bible, and a few minutes to breathe. You'll know what's happening the whole time.",
+      icon: "Flame" as const,
+      title: "A church that expects God to move",
+      body: "We're a Pentecostal church, and we come on Sunday expecting an encounter with Jesus Christ — not a performance about Him.",
+    },
+    {
+      icon: "Heart" as const,
+      title: "A light to the nations",
+      body: "Missions on five continents, and outreach right here in Lake County for the homeless, for widows, and for young mothers.",
     },
     {
       icon: "Shirt" as const,
-      title: "Come as you are",
-      body: "Jeans, dress, t-shirt, suit — all of it shows up on Sunday. Wear what feels like you.",
-    },
-    {
-      icon: "Baby" as const,
-      title: "Your kids are in great hands",
-      body: "Safe, fun, age-appropriate spaces for newborns through 5th grade. Check-in is simple and we'll walk you through it.",
+      title: "Come exactly as you are",
+      body: "No dress code and nothing to prove. Walk in on a Sunday and you'll be welcomed like you've been here for years.",
     },
   ],
 
   life: [
-    { src: life1, alt: "Volunteers laughing while setting up the welcome table" },
-    { src: life2, alt: "Kids laughing during a craft in kids ministry" },
-    { src: life3, alt: "Worship inside the sanctuary" },
-    { src: life4, alt: "Two members hugging after service" },
-    { src: life5, alt: "A small group gathered in a living room" },
-    { src: life6, alt: "Volunteers serving meals in the community" },
+    { src: heroImage.url, alt: "Sunday morning worship at Lake Erie Church" },
+    { src: life1, alt: "Volunteers welcoming guests before service" },
+    { src: life2, alt: "Kids ministry at Lake Erie Church" },
+    { src: waves.url, alt: "Lake Erie shoreline near Madison, Ohio" },
+    { src: life4, alt: "Members greeting one another after service" },
+    { src: life5, alt: "A small group gathered together" },
   ],
 
   ministries: [
-    { name: "Kids", line: "Sundays designed around your kids, not in spite of them." },
-    { name: "Students", line: "A place for middle and high schoolers to be known." },
-    { name: "Young Adults", line: "Real friendships for the in-between years." },
-    { name: "Small Groups", line: "Life is better in a circle of eight than a row of two hundred." },
-    { name: "Care & Counseling", line: "When life gets hard, you don't walk through it alone." },
-    { name: "Serve", line: "Find a spot to give back — in the church and across the city." },
+    { name: "Missions", line: "Evangelism, church planting, children's ministry, and benevolence work across five continents." },
+    { name: "Community Outreach", line: "Serving the homeless, widows, and young mothers right here in Lake County." },
+    { name: "Generations Matter ELC", line: "Early learning for infants through Pre-K, launched in 2022 for our community's families." },
+    { name: "Generations Matter Academy", line: "Academic excellence taught with a Biblical worldview — first classrooms opened in 2025." },
+    { name: "Kids & Youth", line: "Ministry for every age, with six generations worshipping together on one campus." },
+    { name: "Between Sundays", line: "Our podcast — conversations that carry the Sunday message into the rest of your week." },
   ],
 
   events: [
     {
-      date: "This Sunday",
-      title: "Newcomer Welcome",
-      blurb: "First time here? Grab coffee with our team right after the service.",
+      date: "Sundays · 10:00 AM",
+      title: "Join Us This Sunday",
+      blurb: "Come a few minutes early and someone will help you get settled.",
     },
     {
-      date: "Sat, [Date]",
-      title: "Community Workday",
-      blurb: "We're partnering with a local school for a morning of cleanup and care.",
+      date: "Every week",
+      title: "New Here? Plan a Visit",
+      blurb: "Let us know you're coming and we'll have someone ready to welcome you by name.",
     },
     {
-      date: "[Date]",
-      title: "Family Night",
-      blurb: "Food trucks, games, and a short message for the whole family.",
+      date: "Anytime",
+      title: "Watch LEC Online",
+      blurb: "Can't make it to Madison? Our services and messages are on YouTube.",
     },
   ],
 
   sermon: {
-    title: "[Latest Message Title]",
-    speaker: "[Speaker Name]",
-    series: "[Series Name]",
-    date: "[Recent Date]",
+    title: "This Week's Message",
+    speaker: "Pastor Bill Isaacs",
+    series: "Lake Erie Church",
+    date: "Every Sunday",
     summary:
-      "A short, practical look at what it means to follow Jesus in the middle of an ordinary week.",
-    embedUrl: "", // YouTube/FB/podcast embed
-    watchUrl: "#",
+      "Watch this week's message, or catch up on recent teaching from our YouTube channel before you visit in person.",
+    embedUrl: "",
+    watchUrl: "https://www.youtube.com/channel/UCO2LSyS1WFmZvwEnaeYufFw",
   },
 
   give: {
-    line: "Every gift goes toward people — locally and around the world. Give online in about thirty seconds.",
-    onlineUrl: "#",
+    line: "We make a living by what we get, but a life by what we give. Your giving supports this church, our neighbors in Lake County, and mission work on five continents.",
+    onlineUrl: "https://lakeeriechurch.com/give/",
   },
 
   welcomeVideo: {
     enabled: false,
     eyebrow: "Meet us first",
     heading: "A quick hello before you visit.",
-    body: "We know visiting a new church can feel like a big step. So before you ever walk through the doors, here's a short hello from our team — who we are, and what Sunday looks like.",
+    body:
+      "Visiting a new church can feel like a big step. Here's a short hello from Pastors Bill and Shelley so you know exactly who you'll be meeting on Sunday.",
     posterSrc: storyImage,
     embedUrl: "",
   },
 
   contact: {
-    phone: "[(000) 000-0000]",
-    email: "[hello@church.org]",
+    phone: "(440) 983-4140",
+    email: "info@lakeeriechurch.com",
     socials: [
-      { label: "Facebook", url: "#" },
-      { label: "Instagram", url: "#" },
-      { label: "YouTube", url: "#" },
+      { label: "Facebook", url: "https://www.facebook.com/lechurch/" },
+      { label: "YouTube", url: "https://www.youtube.com/channel/UCO2LSyS1WFmZvwEnaeYufFw" },
+      { label: "Current site", url: "https://lakeeriechurch.com" },
     ],
   },
 } as const;
