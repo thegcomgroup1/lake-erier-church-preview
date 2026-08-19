@@ -25,7 +25,6 @@ import waves from "@/assets/lakeerie/waves.jpg.asset.json";
 import storyImage from "@/assets/placeholders/story.jpg";
 import life1 from "@/assets/placeholders/life-1.jpg";
 import life2 from "@/assets/placeholders/life-2.jpg";
-import life3 from "@/assets/placeholders/life-3.jpg";
 import life4 from "@/assets/placeholders/life-4.jpg";
 import life5 from "@/assets/placeholders/life-5.jpg";
 
